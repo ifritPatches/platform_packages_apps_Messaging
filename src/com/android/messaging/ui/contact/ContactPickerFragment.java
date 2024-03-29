@@ -181,7 +181,7 @@ public class ContactPickerFragment extends Fragment implements ContactPickerData
         mCustomHeaderViewPager.setCurrentItem(0);
 
         mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_light);
+        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         mToolbar.setNavigationContentDescription(R.string.back);
         mToolbar.setNavigationOnClickListener(new OnClickListener() {
             @Override
@@ -234,10 +234,10 @@ public class ContactPickerFragment extends Fragment implements ContactPickerData
                 if ((mRecipientTextView.getInputType() & InputType.TYPE_CLASS_PHONE) !=
                         InputType.TYPE_CLASS_PHONE) {
                     mRecipientTextView.setInputType(baseInputType | InputType.TYPE_CLASS_PHONE);
-                    menuItem.setIcon(R.drawable.ic_ime_light);
+                    menuItem.setIcon(R.drawable.ic_twotone_keyboard_24);
                 } else {
                     mRecipientTextView.setInputType(baseInputType | InputType.TYPE_CLASS_TEXT);
-                    menuItem.setIcon(R.drawable.ic_numeric_dialpad);
+                    menuItem.setIcon(R.drawable.ic_twotone_dialpad_24);
                 }
                 ImeUtil.get().showImeKeyboard(getActivity(), mRecipientTextView);
                 return true;
@@ -576,8 +576,8 @@ public class ContactPickerFragment extends Fragment implements ContactPickerData
         // Hide the action bar for contact picker mode. The custom ToolBar containing chips UI
         // etc. will take the spot of the action bar.
         actionBar.hide();
-        UiUtils.setStatusBarColor(getActivity(),
-                getResources().getColor(R.color.compose_notification_bar_background));
+        //UiUtils.setStatusBarColor(getActivity(),
+        //        getResources().getColor(R.color.compose_notification_bar_background));
     }
 
     private GetOrCreateConversationActionMonitor mMonitor;
