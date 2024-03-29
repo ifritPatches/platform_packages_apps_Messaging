@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BugleBaseTheme" parent="Theme.Material3.DayNight" />
+
+    <!-- Base application theme. -->
+    <style name="BugleTheme" parent="BugleBaseTheme">
+        <item name="colorPrimary">@color/system_accent</item>
+        <item name="colorPrimaryDark">@color/system_accent_darker</item>
+        <item name="colorSecondary">@color/system_accent</item>
+
+        <item name="colorPrimaryVariant">@color/system_accent</item>
+        <item name="colorSecondaryVariant">@color/system_accent_2</item>
+        <item name="scrimBackground">@color/netrual_color</item>
+
+        <item name="colorSurface">@color/netrual_color</item>
+        <item name="colorSecondaryContainer">@color/system_accent_soft</item>
+
+        <item name="android:colorBackground">@color/background</item>
+        <item name="actionBarStyle">@style/BugleActionBar</item>
+        <item name="android:textColorHighlight">@color/text_highlight_color</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BugleTheme.ArchivedConversationListActivity" parent="BugleTheme.ConversationListActivity">
+        <item name="colorPrimary">@color/system_accent</item>
+        <item name="colorPrimaryDark">@color/system_accent_2</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Action Bar Theme -->
+    <style name="BugleActionBar" parent="@style/Widget.Material3.ActionBar.Solid">
+        <item name="android:background">@color/system_accent</item>
+        <item name="android:backgroundStacked">@color/system_accent</item>
+        <item name="height">@dimen/action_bar_height</item>
+        <item name="displayOptions">showTitle</item>
+        <item name="titleTextStyle">@style/BugleActionBarTitleTextStyle</item>
+        <item name="elevation">0dp</item>
+    </style>
+</resources>

@@ -1,0 +1,34 @@
+<resources>
+    <!-- Base Color -->
+    <color name="app_icon">@android:color/system_accent1_100</color>
+    <color name="background">@android:color/system_neutral1_10</color>
+    <color name="system_accent">@android:color/system_accent1_500</color>
+    <color name="system_accent_darker">@android:color/system_accent1_700</color>
+    <color name="system_accent_soft">@android:color/system_accent1_600</color>
+    <color name="system_accent_2">@android:color/system_accent2_500</color>
+    <color name="netrual_color">@android:color/system_neutral2_900</color>
+    <color name="system_accent_2_darker">@android:color/system_accent2_700</color>
+    <color name="netrual_color_2">@android:color/system_neutral2_800</color>
+    <color name="primary_color">@color/system_accent</color>
+    <color name="error">#FFC1666B</color>
+
+    <!--  Action bar -->
+    <color name="action_bar_background_color">@color/netrual_color</color>
+    <color name="action_bar_background_color_dark">@color/netrual_color</color>
+    <color name="action_bar_title_text_color">@android:color/white</color>
+    <color name="archived_conversation_action_bar_background_color_dark">@color/netrual_color</color>
+    <color name="contextual_action_bar_background_color">@color/netrual_color</color>
+
+    <color name="conversation_action_bar_title_text_color">@android:color/white</color>
+
+    <color name="action_bar_icon_tint">@android:color/white</color>
+
+    <color name="compose_notification_bar_background">@color/netrual_color</color>
+
+    <color name="contact_picker_tab_pressed">@color/app_icon</color>
+    <color name="contact_picker_tab_underline">@android:color/white</color>
+    
+    <color name="people_and_options_header_text">@android:color/white</color>
+
+    <color name="participant_list_text_primary">@android:color/white</color>
+</resources>
