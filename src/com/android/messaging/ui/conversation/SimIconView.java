@@ -45,14 +45,6 @@ public class SimIconView extends ContactIconView {
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        if (isClickable()) {
-            return super.onTouchEvent(event);
-        }
-        return true;
-    }
-
-    @Override
     protected void maybeInitializeOnClickListener() {
         // TODO: SIM icon view shouldn't consume or handle clicks, but it should if
         // this is the send button for the only SIM in the device or if MSIM is not supported.

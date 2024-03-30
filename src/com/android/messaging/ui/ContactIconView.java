@@ -84,9 +84,7 @@ public class ContactIconView extends AsyncImageView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
-            setColorFilter(mColorPressedId);
-        } else {
+        if (event.getActionMasked() != MotionEvent.ACTION_DOWN) {
             clearColorFilter();
         }
         return super.onTouchEvent(event);
