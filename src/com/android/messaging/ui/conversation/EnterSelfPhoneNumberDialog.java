@@ -30,6 +30,8 @@ import com.android.messaging.datamodel.ParticipantRefresh;
 import com.android.messaging.util.BuglePrefs;
 import com.android.messaging.util.UiUtils;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 /**
  * The dialog for the user to enter the phone number of their sim.
  */
@@ -49,7 +51,7 @@ public class EnterSelfPhoneNumberDialog extends DialogFragment {
         final LayoutInflater inflater = LayoutInflater.from(context);
         mEditText = (EditText) inflater.inflate(R.layout.enter_phone_number_view, null, false);
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        final MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
         builder.setTitle(R.string.enter_phone_number_title)
                 .setMessage(R.string.enter_phone_number_text)
                 .setView(mEditText)

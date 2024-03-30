@@ -30,6 +30,8 @@ import com.android.messaging.datamodel.DataModel;
 import com.android.messaging.ui.conversation.ConversationActivity;
 import com.android.messaging.ui.conversationlist.ConversationListActivity;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 /**
  * Utility class including logic to verify requirements to run Bugle and other activity startup
  * logic. Called from base Bugle activity classes.
@@ -68,7 +70,7 @@ public class BugleActivityUtil {
         }
         UserManager userManager = (UserManager) context.getSystemService(Context.USER_SERVICE);
         if (userManager.hasUserRestriction(UserManager.DISALLOW_SMS)) {
-            new AlertDialog.Builder(activity)
+            new MaterialAlertDialogBuilder(activity)
                     .setMessage(R.string.requires_sms_permissions_message)
                     .setCancelable(false)
                     .setNegativeButton(R.string.requires_sms_permissions_close_button,

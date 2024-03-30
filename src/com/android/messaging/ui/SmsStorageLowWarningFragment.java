@@ -16,7 +16,6 @@
 
 package com.android.messaging.ui;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
@@ -40,6 +39,7 @@ import com.android.messaging.sms.SmsReleaseStorage.Duration;
 import com.android.messaging.sms.SmsStorageStatusManager;
 import com.android.messaging.util.Assert;
 import com.google.common.collect.Lists;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.List;
 
@@ -92,7 +92,7 @@ public class SmsStorageLowWarningFragment extends Fragment {
 
         @Override
         public Dialog onCreateDialog(final Bundle savedInstanceState) {
-            final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            final MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getActivity());
 
             final LayoutInflater inflater = getActivity().getLayoutInflater();
             final View dialogLayout = inflater.inflate(
@@ -183,7 +183,7 @@ public class SmsStorageLowWarningFragment extends Fragment {
             if (actionIndex < 0 || actionIndex > 1) {
                 return null;
             }
-            final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            final MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getActivity());
             builder.setTitle(R.string.sms_storage_low_title)
                     .setMessage(getConfirmDialogMessage(actionIndex))
                     .setNegativeButton(android.R.string.cancel,

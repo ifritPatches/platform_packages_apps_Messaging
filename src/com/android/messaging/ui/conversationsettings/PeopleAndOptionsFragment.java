@@ -16,7 +16,6 @@
 package com.android.messaging.ui.conversationsettings;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.NotificationManager;
 import android.content.Context;
@@ -51,6 +50,8 @@ import com.android.messaging.ui.UIIntents;
 import com.android.messaging.ui.conversation.ConversationActivity;
 import com.android.messaging.util.NotificationsUtil;
 import com.android.messaging.util.Assert;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -148,20 +149,17 @@ public class PeopleAndOptionsFragment extends Fragment
                 }
                 final Resources res = getResources();
                 final Activity activity = getActivity();
-                new AlertDialog.Builder(activity)
+                new MaterialAlertDialogBuilder(activity)
                         .setTitle(res.getString(R.string.block_confirmation_title,
                                 item.getOtherParticipant().getDisplayDestination()))
                         .setMessage(res.getString(R.string.block_confirmation_message))
                         .setNegativeButton(android.R.string.cancel, null)
                         .setPositiveButton(android.R.string.ok,
-                                new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface arg0, int arg1) {
+                            (arg0, arg1) -> {
                                 mBinding.getData().setDestinationBlocked(mBinding, true);
                                 activity.setResult(ConversationActivity.FINISH_RESULT_CODE);
                                 activity.finish();
-                            }
-                        })
+                            })
                         .create()
                         .show();
                 break;
