@@ -21,4 +21,6 @@
 
     <!-- Notification channel -->
     <string name="notification_channel_messages_title">消息</string>
+
+    <string name="contact_picker_hint_text">点击打开本机联系人列表</string>
 </resources>
