@@ -22,7 +22,6 @@
 
     <style name="BugleTheme.ConversationActivity"
            parent="@style/BugleTheme.ConversationActivityBase">
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="BugleTheme.ConversationListActivity" parent="BugleTheme">
