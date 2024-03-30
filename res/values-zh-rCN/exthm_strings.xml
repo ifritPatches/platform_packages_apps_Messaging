@@ -25,6 +25,8 @@
 
     <string name="contact_picker_hint_text">点击打开本机联系人列表</string>
 
+    <string name="forward_tips_toast">请选择一个您要转发的目标对话</string>
+
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">标记为已读</string>
 

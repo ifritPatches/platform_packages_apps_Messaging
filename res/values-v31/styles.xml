@@ -94,4 +94,7 @@
         <item name="android:textSize">@dimen/settings_list_text_size</item>
         <item name="android:statusBarColor">@color/action_bar_background_color</item>
     </style>
+
+    <style name="BugleTheme.DialogActivity" parent="@style/Theme.Material3.DayNight">
+    </style>
 </resources>

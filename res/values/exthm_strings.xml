@@ -20,6 +20,8 @@
     <string name="dialog_delete_title">Delete</string>
     <string name="dialog_delete_message">Remove selected item?</string>
 
+    <string name="forward_tips_toast">Please select the conversation you wish to forward to a target.</string>
+
     <!-- Captcha -->
     <string name="captcha_copy_action">Copy %s</string>
     <string name="captcha_has_copied_toast">Verification code already copied to the clipboard, long press your input box to paste.</string>

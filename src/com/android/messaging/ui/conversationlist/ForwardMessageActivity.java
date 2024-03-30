@@ -18,6 +18,7 @@ package com.android.messaging.ui.conversationlist;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.android.messaging.datamodel.data.ConversationListData;
 import com.android.messaging.datamodel.data.ConversationListItemData;
@@ -26,6 +27,7 @@ import com.android.messaging.ui.BaseBugleActivity;
 import com.android.messaging.ui.UIIntents;
 import com.android.messaging.ui.conversationlist.ConversationListFragment.ConversationListFragmentHost;
 import com.android.messaging.util.Assert;
+import com.android.messaging.R;
 
 /**
  * An activity that lets the user forward a SMS/MMS message by picking from a conversation in the
@@ -38,6 +40,7 @@ public class ForwardMessageActivity extends BaseBugleActivity
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Toast.makeText(this, R.string.forward_tips_toast, Toast.LENGTH_LONG).show();
         final ConversationListFragment fragment =
                 ConversationListFragment.createForwardMessageConversationListFragment();
         getFragmentManager().beginTransaction().add(android.R.id.content, fragment).commit();
