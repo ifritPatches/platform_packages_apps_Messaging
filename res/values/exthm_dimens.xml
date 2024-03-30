@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="sim_selector_margin_start">2dp</dimen>
+    <dimen name="sim_selector_margin_end">4dp</dimen>
+
+
     <!-- Captcha -->
     <dimen name="captcha_list_padding_vertical">12dp</dimen>
     <dimen name="captcha_list_padding_horizontal">25dp</dimen>

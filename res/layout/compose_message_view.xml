@@ -145,16 +145,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <FrameLayout
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     style="@style/ComposeMessageViewFrameLayoutStyle"
                     android:layout_gravity="top" >
                     <com.android.messaging.ui.conversation.SimIconView
                         android:id="@+id/self_send_icon"
                         android:layout_width="@dimen/conversation_message_contact_icon_size"
                         android:layout_height="@dimen/conversation_message_contact_icon_size"
+                        android:layout_gravity="center_vertical"
                         android:importantForAccessibility="no"
+                        android:layout_marginStart="@dimen/sim_selector_margin_start"
+                        android:layout_marginEnd="@dimen/sim_selector_margin_end"
                         app:iconSize="normal"
                         app:reveal="true"
                         android:clickable="true" />
@@ -162,11 +166,11 @@
                         android:id="@+id/send_message_button"
                         android:layout_width="@dimen/conversation_message_contact_icon_size"
                         android:layout_height="@dimen/conversation_message_contact_icon_size"
+                        android:layout_gravity="center_vertical"
                         android:src="@drawable/ic_send_light"
                         android:background="@drawable/send_arrow_background"
-                        android:contentDescription="@string/sendButtonContentDescription"
-                        android:visibility="gone" />
-                </FrameLayout>
+                        android:contentDescription="@string/sendButtonContentDescription" />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/mms_indicator"

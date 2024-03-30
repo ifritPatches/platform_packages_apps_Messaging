@@ -226,19 +226,6 @@ public class ComposeMessageView extends LinearLayout
                 hideAttachmentsWhenShowingSims(shown);
             }
         });
-        mSelfSendIcon.setOnLongClickListener(new OnLongClickListener() {
-            @Override
-            public boolean onLongClick(final View v) {
-                if (mHost.shouldShowSubjectEditor()) {
-                    showSubjectEditor();
-                } else {
-                    boolean shown = mInputManager.toggleSimSelector(true /* animate */,
-                            getSelfSubscriptionListEntry());
-                    hideAttachmentsWhenShowingSims(shown);
-                }
-                return true;
-            }
-        });
 
         mComposeSubjectText = (PlainTextEditText) findViewById(
                 R.id.compose_subject_text);
@@ -273,9 +260,6 @@ public class ComposeMessageView extends LinearLayout
         mSendButton.setOnLongClickListener(new OnLongClickListener() {
             @Override
             public boolean onLongClick(final View arg0) {
-                boolean shown = mInputManager.toggleSimSelector(true /* animate */,
-                        getSelfSubscriptionListEntry());
-                hideAttachmentsWhenShowingSims(shown);
                 if (mHost.shouldShowSubjectEditor()) {
                     showSubjectEditor();
                 }
@@ -726,22 +710,22 @@ public class ComposeMessageView extends LinearLayout
         int sendWidgetMode = SEND_WIDGET_MODE_SELF_AVATAR;
         if (selfSendButtonUri != null) {
             if (hasWorkingDraft && isDataLoadedForMessageSend()) {
-                UiUtils.revealOrHideViewWithAnimation(mSendButton, VISIBLE, null);
+                /*UiUtils.revealOrHideViewWithAnimation(mSendButton, VISIBLE, null);
                 if (isOverriddenAvatarAGroup()) {
                     // If the host has overriden the avatar to show a group avatar where the
                     // send button sits, we have to hide the group avatar because it can be larger
                     // than the send button and pieces of the avatar will stick out from behind
                     // the send button.
                     UiUtils.revealOrHideViewWithAnimation(mSelfSendIcon, GONE, null);
-                }
+                }*/
                 mMmsIndicator.setVisibility(draftMessageData.getIsMms() ? VISIBLE : INVISIBLE);
                 sendWidgetMode = SEND_WIDGET_MODE_SEND_BUTTON;
             } else {
                 mSelfSendIcon.setImageResourceUri(selfSendButtonUri);
-                if (isOverriddenAvatarAGroup()) {
+                /*if (isOverriddenAvatarAGroup()) {
                     UiUtils.revealOrHideViewWithAnimation(mSelfSendIcon, VISIBLE, null);
                 }
-                UiUtils.revealOrHideViewWithAnimation(mSendButton, GONE, null);
+                UiUtils.revealOrHideViewWithAnimation(mSendButton, GONE, null);*/
                 mMmsIndicator.setVisibility(INVISIBLE);
                 if (shouldShowSimSelector(mConversationDataModel.getData())) {
                     sendWidgetMode = SEND_WIDGET_MODE_SIM_SELECTOR;
